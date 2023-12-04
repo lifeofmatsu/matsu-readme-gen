@@ -79,7 +79,7 @@ const generateMarkdown = (input) => {
 
 ## Questions
 Regarding any questions or comments, please reach out to the author:
-#### GitHub: ${input.githubUser} (https://github.com/${input.githubUser})
+#### GitHub: [${input.githubUser}](https://github.com/${input.githubUser})
 #### Email Address: ${input.email}\n
 
 ## License\n${renderLicenseSection(input.license, input.authorName)}\n

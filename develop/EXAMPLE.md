@@ -1,10 +1,10 @@
-# Example of README Generator
-### by Jus Ferrell
+# ABC PROJECT
+### by Jane Roe
 ![License](https://img.shields.io/badge/License-GPLv3-blue)
 
 
 ## Description
-A user example for the README Generator application.
+An application that helps users speak the alphabet backwards. A Jane Roe production for XYZ University's Full-Stack Web Dev Bootcamp.
 
 
 ## Table of Contents
@@ -19,37 +19,37 @@ A user example for the README Generator application.
 
 
 ## Installation
-Installation instructions are simple. Here is the step-by-step guide [...].
+The installation instructions are simple! They're so simple, we didn't think we needed to write them out. I mean, how hard can it be, right? You wouldn't happen to be so lost in life that you couldn't do this, right?
 
 
 ## Usage
-The user will need instructions and examples to use the application. The following is our explanation (w/ images) [...].
+Well... It looks like you struggled with the installation instructions, so this time we will be generous and provide proper usage explanation with images.
 
 
 ## Features
-This application boasts its simplicity, but the user may look forward to these features [...].
+There are no features worth noting for this project. It just spits out the alphabet backwards. You read the alphabet backwards and pat yourself on the back. Done.
 
 
 ## Contribution
-The eager user can find out how to contribute to this project here [...].
+No one in their right mind would contribute to this project, but here's how anyways.
 
 
 ## Tests
-We ran the following tests for the application to ensure the quality of this project [...].
+Tests? Application quality? Never heard of her.
 
 
 ## Credits
-We would like to credit the following forums and videos from XYZ Exchange & MeTube for their help towards our project [...].
+We referenced the dictionary because we didn't know our alphabet.
 
 
 ## Questions
 Regarding any questions or comments, please reach out to the author:
-#### GitHub: lifeofmatsu (https://github.com/lifeofmatsu)
-#### Email Address: myemail@whymail.com
+#### GitHub: [JaneRoeIsSmart!](https://github.com/JaneRoeIsSmart!)
+#### Email Address: janeroe@whyemail.com
 
 
 ## License
-Copyright © 2019 Jus Ferrell. 
+Copyright © 2019 Jane Roe. 
 This project is licensed under the GNU General Public License v3.0.
 For more information on this license, please visit the 
 official page at [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0).
