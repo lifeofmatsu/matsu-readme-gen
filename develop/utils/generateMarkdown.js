@@ -51,17 +51,18 @@ official page at ${renderLicenseLink(license)}.`;
 }
 
 const generateMarkdown = (input) => {
-    return `# ${input.title}\n### by ${input.authorName}\n${renderLicenseBadge(input.license)}\n
+    return `# ${input.title}\n## by ${input.authorName}
+${renderLicenseBadge(input.license)}\n
 
 ## Description\n${input.description}\n
 
 ## Table of Contents
-#### 1. [Installation](#installation)
-#### 2. [Usage](#usage)
-#### 3. [License](#license)
-#### 4. [Contribution](#contribution)
-#### 5. [Tests](#tests)
-#### 6. [Questions](#questions)\n
+### [1. Installation](#installation)
+### [2. Usage](#usage)
+### [3. Contribution](#contribution)
+### [4. Tests](#tests)
+### [5. License](#license)
+### [6. Questions](#questions)\n
 
 ## Installation\n${input.installation}\n
 
