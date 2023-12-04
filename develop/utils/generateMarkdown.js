@@ -31,22 +31,16 @@ const licenseLinks = new Map([
     ['The Unlicense', `http://unlicense.org/`]
 ]);
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 const renderLicenseBadge = (license) => {
     let abbrVal = licenseAbbr.get(license);
     return abbrVal ? `![License](https://img.shields.io/badge/License-${encodeURIComponent(abbrVal)})` : '';
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 const renderLicenseLink = (license) => {
     let linkVal = licenseLinks.get(license);
     return linkVal ? `![License link](${linkVal})` : '';
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 const renderLicenseSection = (license, authorName) => {
     let licenseText = `Copyright © 2019 ${authorName}. 
 This project is licensed under the ${license}.
@@ -56,41 +50,33 @@ official page at ${renderLicenseLink(license)}.`;
     return license ? licenseText : 'This project is not licensed';
 }
 
-// TODO: Create a function to generate markdown for README
-const generateMarkdown = (data) => {
-    return `# ${data.title}\nby ${data.authorName}
-${renderLicenseBadge(data.license)}\n
+const generateMarkdown = (input) => {
+    return `# ${input.title}\n### by ${input.authorName}\n${renderLicenseBadge(input.license)}\n
 
-## Description
-${data.description}\n
+## Description\n${input.description}\n
 
 ## Table of Contents
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [License](#license)
-4. [Contribution](#contribution)
-5. [Tests](#tests)
-6. [Questions](#questions)\n
+#### 1. [Installation](#installation)
+#### 2. [Usage](#usage)
+#### 3. [License](#license)
+#### 4. [Contribution](#contribution)
+#### 5. [Tests](#tests)
+#### 6. [Questions](#questions)\n
 
-## Installation
-${data.installation}\n
+## Installation\n${input.installation}\n
 
-## Usage
-${data.usage}\n
+## Usage\n${input.usage}\n
 
-## License
-${renderLicenseSection(data.license, data.authorName)}\n
+## Contribution\n${input.contribution}\n
 
-## Contribution
-${data.contribution}\n
+## Tests\n${input.tests}\n
 
-## Tests
-${data.tests}\n
+## License\n${renderLicenseSection(input.license, input.authorName)}\n
 
 ## Questions
 Regarding any questions or comments, please reach out to the author:
-#### GitHub: ${data.githubUser} (https://github.com/${data.githubUser})
-#### Email Address: ${data.email}
+#### GitHub: ${input.githubUser} (https://github.com/${input.githubUser})
+#### Email Address: ${input.email}
 `;
 }
 
