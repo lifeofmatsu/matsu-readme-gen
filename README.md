@@ -17,16 +17,16 @@ A README generator to create a professional README for a new user project.
 Walkthrough video and screenshot images for user to get started.
 
 #### Walkthrough Video
-Video can be accessed through Google Drive here: [User Guide (Video)]().
+Video can be accessed through Google Drive here: [User Guide (Video)](https://drive.google.com/file/d/18qWC1c1mQ9d4lP2ruwaQkr_n4GrAvFzO/view?usp=drive_link).
 
 #### Screenshots from Application
-Image from Terminal (User Input):
+###### Image from Terminal (User Input):
 
 ```md
 ![Image from Terminal](./develop/assets/images/terminal.png)
 ```
 
-Images of Example README.md file:
+###### Images of Example README.md file:
 
 ```md
 ![Example README 1](./develop/assets/images/example_readme_1.png)
