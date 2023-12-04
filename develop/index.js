@@ -1,8 +1,8 @@
+
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
-const { generateMarkdown } = require('./utils/generateMarkdown');
 
-// const { writeFile } = promises;
+const { generateMarkdown } = require('./utils/generateMarkdown');
 
 const userPrompt = () => {
     return inquirer.prompt([

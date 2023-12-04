@@ -38,31 +38,30 @@ const renderLicenseBadge = (license) => {
 
 const renderLicenseLink = (license) => {
     let linkVal = licenseLinks.get(license);
-    return linkVal ? `![License link](${linkVal})` : '';
+    return linkVal ? `[${license}](${linkVal})` : '';
 }
 
 const renderLicenseSection = (license, authorName) => {
     let licenseText = `Copyright © 2019 ${authorName}. 
 This project is licensed under the ${license}.
-For more information on the ${license}, please visit the 
+For more information on this license, please visit the 
 official page at ${renderLicenseLink(license)}.`;
 
     return license ? licenseText : 'This project is not licensed';
 }
 
 const generateMarkdown = (input) => {
-    return `# ${input.title}\n## by ${input.authorName}
-${renderLicenseBadge(input.license)}\n
+    return `# ${input.title}\n### by ${input.authorName}\n${renderLicenseBadge(input.license)}\n
 
 ## Description\n${input.description}\n
 
 ## Table of Contents
-### [1. Installation](#installation)
-### [2. Usage](#usage)
-### [3. Contribution](#contribution)
-### [4. Tests](#tests)
-### [5. License](#license)
-### [6. Questions](#questions)\n
+#### [1. Installation](#installation)
+#### [2. Usage](#usage)
+#### [3. Contribution](#contribution)
+#### [4. Tests](#tests)
+#### [5. License](#license)
+#### [6. Questions](#questions)\n
 
 ## Installation\n${input.installation}\n
 
