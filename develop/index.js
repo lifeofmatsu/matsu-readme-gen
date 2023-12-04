@@ -1,19 +1,25 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
+const { generateMarkdown } = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const userPrompt = () => {
+function userPrompt() {
     return inquirer.prompt([
         {
             type: 'input',
             name: 'title',
-            message: 'Project Title:'
+            message: 'Enter Your Project Title:'
+        },
+        {
+            type: 'input',
+            name: 'authorName',
+            message: `Enter the Author's Name`
         },
         {
             type: 'input',
             name: 'description',
-            message: 'Description:'
+            message: 'Compose a Project Description:'
         },
         {
             type: 'input',
@@ -57,7 +63,7 @@ const userPrompt = () => {
         },
         {
             type: 'input',
-            name: 'github_user',
+            name: 'githubUser',
             message: 'GitHub Username:'
         },
         {
@@ -66,7 +72,7 @@ const userPrompt = () => {
             message: 'Email Address:'
         }
     ]);
-};
+}
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
@@ -78,8 +84,8 @@ const writeToFile = (fileName, data) => {
 // TODO: Create a function to initialize app
 const main = () => {
     userPrompt()
-    .then((answers) => writeFile('README.md', answers))
-    .then(() => console.log('Input was written to README.md successfully'))
+    .then((data) => writeFile('README.md', generateMarkdown(data)))
+    .then(() => console.log('Input written to README.md successfully'))
     .catch((err) => console.error(err));
 }
 

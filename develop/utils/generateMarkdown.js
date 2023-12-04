@@ -1,18 +1,3 @@
-// const licenseOpts = [
-//     'Apache License 2.0',
-//     'GNU General Public License v3.0',
-//     'MIT License',
-//     'BSD 2-Clause \"Simplified\" License',
-//     'BSD 3-Clause \"New\" or \"Revised\" License',
-//     'Boost Software License 1.0',
-//     'Creative Commons Zero v1.0 Universal',
-//     'Eclipse Public License 2.0',
-//     'GNU Affero General Public License v3.0',
-//     'GNU General Public License v2.0',
-//     'GNU Lesser General Public License v2.1',
-//     'Mozilla Public License 2.0',
-//     'The Unlicense'
-// ];
 
 const licenseAbbr = new Map([
     ['Apache License 2.0', 'Apache_2.0-blue'],
@@ -51,49 +36,6 @@ const licenseLinks = new Map([
 const renderLicenseBadge = (license) => {
     let abbrVal = licenseAbbr.get(license);
     return abbrVal ? `![License](https://img.shields.io/badge/License-${encodeURIComponent(abbrVal)})` : '';
-
-    // switch (license) {
-    //     case licenseOpts[0]: //Apache 2.0
-    //         `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`;
-    //         break;
-    //     case licenseOpts[1]: //GPLv3
-    //         `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
-    //         break;
-    //     case licenseOpts[2]: //MIT
-    //         `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
-    //         break;
-    //     case licenseOpts[3]: //BSD 2-Clause
-    //         `![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)`;
-    //         break;
-    //     case licenseOpts[4]: //BSD 3-Clause
-    //         `![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`;
-    //         break;
-    //     case licenseOpts[5]: //Boost 1.0
-    //         `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`;
-    //         break;
-    //     case licenseOpts[6]: //CC0 1.0
-    //         `![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)`;
-    //         break;
-    //     case licenseOpts[7]: //EPL 1.0
-    //         `![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)`;
-    //         break;
-    //     case licenseOpts[8]: //AGPL v3
-    //         `![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)`;
-    //         break;
-    //     case licenseOpts[9]: //GPL v2
-    //         `![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)`;
-    //         break;
-    //     case licenseOpts[10]: //LGPL v3
-    //         `![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)`;
-    //         break;
-    //     case licenseOpts[11]: //MPL 2.0
-    //         `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
-    //         break;
-    //     case licenseOpts[12]: //Unlicense
-    //         `![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)`;
-    //         break;
-    //     default: return '';
-    // }
 }
 
 // TODO: Create a function that returns the license link
@@ -105,52 +47,51 @@ const renderLicenseLink = (license) => {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-const renderLicenseSection = (license) => {
-    let licenseText = `## License\nCopyright © 2019 ${github_user}. 
-    This project is licensed under the ${license} license.
-    For more information on the ${license}, please visit their 
-    official page at ${renderLicenseLink(license)}.`;
+const renderLicenseSection = (license, authorName) => {
+    let licenseText = `Copyright © 2019 ${authorName}. 
+This project is licensed under the ${license}.
+For more information on the ${license}, please visit the 
+official page at ${renderLicenseLink(license)}.`;
 
-    return license ? licenseText : '';
+    return license ? licenseText : 'This project is not licensed';
 }
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) => {
-    return `# ${data.title}
-    ${renderLicenseBadge(data.license)}\n
+    return `# ${data.title}\nby ${data.authorName}
+${renderLicenseBadge(data.license)}\n
 
-    ## Description
-    ${data.description}\n
+## Description
+${data.description}\n
 
-    ## Table of Contents
-    1. [Installation](#installation)
-    2. [Usage](#usage)
-    3. [License](#license)
-    4. [Contribution](#contribution)
-    5. [Tests](#tests)
-    6. [Questions](#questions)\n
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contribution](#contribution)
+5. [Tests](#tests)
+6. [Questions](#questions)\n
 
-    ## Installation
-    ${data.installation}\n
+## Installation
+${data.installation}\n
 
-    ## Usage
-    ${data.usage}\n
+## Usage
+${data.usage}\n
 
-    ## License
-    ${renderLicenseSection(data.license)}\n
+## License
+${renderLicenseSection(data.license, data.authorName)}\n
 
-    ## Contribution
-    ${data.contribution}\n
+## Contribution
+${data.contribution}\n
 
-    ## Tests
-    ${data.tests}\n
+## Tests
+${data.tests}\n
 
-    ## Questions
-    Regarding any questions or comments, please reach out to the author:
-    #### GitHub: ${data.github_user} (https://github.com/${data.github_user})
-    #### Email Address: ${data.email}
-    `;
+## Questions
+Regarding any questions or comments, please reach out to the author:
+#### GitHub: ${data.githubUser} (https://github.com/${data.githubUser})
+#### Email Address: ${data.email}
+`;
 }
 
-//module.exports = generateMarkdown;
-export default generateMarkdown;
+module.exports.generateMarkdown = generateMarkdown;
