@@ -32,8 +32,8 @@ const userPrompt = () => {
         },
         {
             type: 'input',
-            name: 'testing',
-            message: 'Testing:'
+            name: 'tests',
+            message: 'Tests:'
         },
         {
             type: 'list',
@@ -70,16 +70,18 @@ const userPrompt = () => {
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
-
+    fs.writeFile(fileName, data, (err) => 
+        err ? console.log(err) : console.log('README.md file created successfully')
+    );
 }
 
 // TODO: Create a function to initialize app
-const init = () => {
+const main = () => {
     userPrompt()
-    .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
+    .then((answers) => writeFile('README.md', answers))
     .then(() => console.log('Input was written to README.md successfully'))
     .catch((err) => console.error(err));
 }
 
 // Function call to initialize app
-init();
+main();
