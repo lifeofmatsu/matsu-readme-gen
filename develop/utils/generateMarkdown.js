@@ -56,27 +56,33 @@ const generateMarkdown = (input) => {
 ## Description\n${input.description}\n
 
 ## Table of Contents
-#### [1. Installation](#installation)
-#### [2. Usage](#usage)
-#### [3. Contribution](#contribution)
-#### [4. Tests](#tests)
-#### [5. License](#license)
-#### [6. Questions](#questions)\n
+#### - [Installation](#installation)
+#### - [Usage](#usage)
+#### - [Features](#features)
+#### - [Contribution](#contribution)
+#### - [Tests](#tests)
+#### - [Credits](#credits)
+#### - [Questions](#questions)
+#### - [License](#license)\n
 
 ## Installation\n${input.installation}\n
 
 ## Usage\n${input.usage}\n
 
+## Features\n${input.features}\n
+
 ## Contribution\n${input.contribution}\n
 
 ## Tests\n${input.tests}\n
 
-## License\n${renderLicenseSection(input.license, input.authorName)}\n
+## Credits\n${input.credits}\n
 
 ## Questions
 Regarding any questions or comments, please reach out to the author:
 #### GitHub: ${input.githubUser} (https://github.com/${input.githubUser})
-#### Email Address: ${input.email}
+#### Email Address: ${input.email}\n
+
+## License\n${renderLicenseSection(input.license, input.authorName)}\n
 `;
 }
 

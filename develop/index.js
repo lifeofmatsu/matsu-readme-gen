@@ -33,6 +33,11 @@ const userPrompt = () => {
         },
         {
             type: 'input',
+            name: 'features',
+            message: 'Highlight any noteworthy features:'
+        },
+        {
+            type: 'input',
             name: 'contribution',
             message: 'Outline contribution guidelines:'
         },
@@ -40,6 +45,11 @@ const userPrompt = () => {
             type: 'input',
             name: 'tests',
             message: 'List any tests written for the application:'
+        },
+        {
+            type: 'input',
+            name: 'credits',
+            message: 'List any outside sources referenced while completing this project:'
         },
         {
             type: 'list',
