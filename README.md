@@ -53,6 +53,10 @@ License badge text, colors, and links adapted from their Markdown License Badges
 Software used to record project submission video (featured in this readme).
 (https://www.screencastify.com/)
 
+##### Shields.io -
+Used to generate static badges for licenses in README.
+(https://shields.io/badges)
+
 ##### [Xander Rapstine](https://github.com/Xandromus), [Grace Choi](https://github.com/gachoi06), & The Coding Bootcamp -
 Provided starter code (function names / TODOs) for this project.
 (https://github.com/coding-boot-camp/potential-enigma.git)
