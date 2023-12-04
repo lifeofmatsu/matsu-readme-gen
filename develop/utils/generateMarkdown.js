@@ -1,10 +1,10 @@
-
+//map assigns license to badge text/color
 const licenseAbbr = new Map([
     ['Apache License 2.0', 'Apache_2.0-blue'],
     ['GNU General Public License v3.0', 'GPLv3-blue'],
     ['MIT License', 'MIT-yellow'],
-    ['BSD 2-Clause \"Simplified\" License', 'BSD_2--Clause-orange'],
-    ['BSD 3-Clause \"New\" or \"Revised\" License', 'BSD_3--Clause-blue'],
+    [`BSD 2-Clause "Simplified" License`, 'BSD_2--Clause-orange'],
+    [`BSD 3-Clause "New" or "Revised" License`, 'BSD_3--Clause-blue'],
     ['Boost Software License 1.0', 'Boost_1.0-lightblue'],
     ['Creative Commons Zero v1.0 Universal', 'CC0_1.0-lightgrey'],
     ['Eclipse Public License 2.0', 'EPL_2.0-red'],
@@ -15,6 +15,7 @@ const licenseAbbr = new Map([
     ['The Unlicense', 'Unlicense-blue']
 ]);
 
+//map assigns license to official link
 const licenseLinks = new Map([
     ['Apache License 2.0', `https://opensource.org/licenses/Apache-2.0`],
     ['GNU General Public License v3.0', `https://www.gnu.org/licenses/gpl-3.0`],
@@ -31,16 +32,19 @@ const licenseLinks = new Map([
     ['The Unlicense', `http://unlicense.org/`]
 ]);
 
+//get license badge from abbreviations map
 const renderLicenseBadge = (license) => {
-    let abbrVal = licenseAbbr.get(license);
+    let abbrVal = licenseAbbr.get(license); //matches user input to map key and assigns its value
     return abbrVal ? `![License](https://img.shields.io/badge/License-${encodeURIComponent(abbrVal)})` : '';
 }
 
+//get license link from links map
 const renderLicenseLink = (license) => {
-    let linkVal = licenseLinks.get(license);
+    let linkVal = licenseLinks.get(license); //matches user input to map key and assigns its value
     return linkVal ? `[${license}](${linkVal})` : '';
 }
 
+//generates license section content
 const renderLicenseSection = (license, authorName) => {
     let licenseText = `Copyright © 2019 ${authorName}. 
 This project is licensed under the ${license}.
@@ -50,6 +54,7 @@ official page at ${renderLicenseLink(license)}.`;
     return license ? licenseText : 'This project is not licensed';
 }
 
+//generates readme content
 const generateMarkdown = (input) => {
     return `# ${input.title}\n### by ${input.authorName}\n${renderLicenseBadge(input.license)}\n
 
@@ -86,4 +91,5 @@ Regarding any questions or comments, please reach out to the author:
 `;
 }
 
+//exports generateMarkdown function to index.js
 module.exports.generateMarkdown = generateMarkdown;

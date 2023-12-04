@@ -2,25 +2,67 @@
 ### by justin (matsu) ferrell
 
 ## Description
-UCSD Full Stack Bootcamp Challenge 9 - 
-A README generator to create a professional README for a new project.
+#### UCSD Full-Stack Bootcamp Challenge 9 - 
+A README generator to create a professional README for a new user project.
 
 
 ## Table of Contents
-1. index.js
-2. generateMarkdown.js
-3. package.json
-4. README.md
+#### - [Usage & Features](#usage_&_features)
+#### - [Credits](#credits)
+#### - [Questions](#questions)
+#### - [License](#license)
 
 
-## Getting Started
-### Walkthrough Video
-(Google Drive Link - )
+## Usage
+Walkthrough video and screenshot images for user to get started.
 
-### Other Helpful Images
+#### Walkthrough Video
+Video can be accessed through Google Drive here: [User Guide (Video)]().
+
+#### Screenshots from Application
+Image from Terminal (User Input):
+
+```md
+![Image from Terminal](./develop/assets/images/terminal.png)
+```
+
+Images of Example README.md file:
+
+```md
+![Example README 1](./develop/assets/images/example_readme_1.png)
+```
+```md
+![Example README 2](./develop/assets/images/example_readme_2.png)
+```
 
 
-## Credits & Sources
+## Credits
+##### ChatGPT 4 -
+Tutorial on the usage of maps and their features.
+(https://chat.openai.com/)
+
+##### GitHub -
+List of license options adapted from GitHub Repo create page.
+(https://github.com/)
+
+##### [Lukas Himsel](https://gist.github.com/lukas-h) -
+License badge text, colors, and links adapted from their Markdown License Badges repo.
+(https://gist.github.com/2a5d00690736b4c3a7ba.git)
+
+##### Screencastify -
+Software used to record project submission video (featured in this readme).
+(https://www.screencastify.com/)
+
+##### [Xander Rapstine](https://github.com/Xandromus), [Grace Choi](https://github.com/gachoi06), & The Coding Bootcamp -
+Provided starter code (function names / TODOs) for this project.
+(https://github.com/coding-boot-camp/potential-enigma.git)
+
+
+## Questions
+#### GitHub profile: [Lifeofmatsu](https://github.com/lifeofmatsu)
+#### Email address: jdferrell@health.ucsd.edu
+
+This project: [README Generator Repo](https://github.com/lifeofmatsu/matsu-readme-gen.git)
 
 
 ## License
