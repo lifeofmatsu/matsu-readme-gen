@@ -22,19 +22,15 @@ Video can be accessed through Google Drive here: [User Guide (Video)](https://dr
 #### Screenshots from Application
 ###### Image from Terminal (User Input):
 
-```md
-[![Image from Terminal](./develop/assets/images/terminal.png)]
-```
+
+![Image from Terminal](./develop/assets/images/terminal.png)
+
 
 ###### Images of Example README.md file:
 
-```md
 ![Example README 1](./develop/assets/images/example_readme_1.png)
-```
-```md
-![Example README 2](./develop/assets/images/example_readme_2.png)
-```
 
+![Example README 2](./develop/assets/images/example_readme_2.png)
 
 ## Credits
 ##### ChatGPT 4 -
