@@ -23,7 +23,7 @@ Video can be accessed through Google Drive here: [User Guide (Video)](https://dr
 ###### Image from Terminal (User Input):
 
 ```md
-![Image from Terminal](./develop/assets/images/terminal.png)
+[![Image from Terminal](./develop/assets/images/terminal.png)]
 ```
 
 ###### Images of Example README.md file:
